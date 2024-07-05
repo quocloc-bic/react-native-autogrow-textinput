@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactNative, {TextInput, Platform, NativeModules} from 'react-native';
 import PropTypes from 'prop-types';
+import PasteInput from 'react-native-paste-image-input';
 
 const ANDROID_PLATFORM = (Platform.OS === 'android');
 
@@ -45,7 +46,7 @@ export default class AutoGrowingTextInput extends Component {
 
   render() {
     return (
-      <TextInput
+      <PasteInput
         multiline
         {...this.props} {...this.style}
         style={[this.props.style, {height: 'auto'}]}
